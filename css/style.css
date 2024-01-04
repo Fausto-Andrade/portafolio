@@ -55,7 +55,7 @@ body
     align-content: center;
     flex-wrap: nowrap;
     align-items:unset;
-    /* height:100vh; Este valor lo puedes omitir si la altura de tu componente esta definida */
+    /*height: 100vh; Este valor lo puedes omitir si la altura de tu componente esta definida */
     width: auto;
 }
 .header
@@ -148,7 +148,7 @@ body
 .efecto
 {
 	background: #3a3a3b;
-	margin-top: 50px;
+	/* margin-top: 50px; */
     font-size: 4rem;
     font-weight: 900 !important;
     letter-spacing: -1px;
@@ -379,18 +379,12 @@ a{
 {    
     overflow: hidden;
 }
-/* .slider:hover
-{
-	width: 100%;
-	height: auto;
-	margin-top: 40px;
-} */
 .slider .slide-track
 {
 	display: flex;
 	animation: scroll 30s infinite;
 	-webkit-animation: scroll 30s infinite linear;
-	width: calc(100px * 12);
+	width: calc(200px * 12);
 	margin-top: 20px;
 	margin-bottom: 0px;
 }
@@ -431,47 +425,6 @@ a{
 {
     display: flex;
 }
-#testimonio
-{
-    position: relative;
-    color: rgb(250, 242, 144);
-    height: 100px;
-    padding: 6% 6%;
-}
-#testimonio .trama-video
-{
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-    top: 0;
-    left: 0;
-}
-#testimonio .pie-pagina
-{
-    z-index: 3;
-    position: relative;
-}
-.centrar-texto
-{
-    text-align: center;
-}
-.inclinar--texto
-{
-    font-style: italic;
-}
-
-.video-fondo
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 298%;
-    object-fit: cover;
-    object-position: center;
-    filter: grayscale(1);
-    opacity: 0.5;
-}
 .copy
 {
     text-align: center;
@@ -483,36 +436,14 @@ a{
 {
     display: flex;
 }
-#testimonio
-{
-    
-    height: 40%;
-}
-#testimonio .trama-video
-{
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-    top: 0;
-    left: 0;
-}
 .centrar-texto
 {
     text-align: center;
-}
-.inclinar--texto
-{
-    font-style: italic;
 }
 .copy
 {
     text-align: center;
     top: 100%;
-}
-
-  section
-{
-	position: relative;
 }
 footer .pie
 {
@@ -522,22 +453,15 @@ footer .pie
 }
 footer .pie .lista-redes
 {
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-footer .pie .lista-redes
-{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
 }
 footer .pie .lista-redes a
 {
 	margin-left: 1rem;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
     color: rgb(250, 242, 144);
-    z-index: 2;
 }
 .container
 {
@@ -585,10 +509,15 @@ footer .pie .lista-redes a
 }
 
 /* -------------------------------------------------------------------------- */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
+
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+    }
+    .titulo-h1 .efecto
+    {
+        margin-top: 30%;
     }
 
     .toggle-button {
@@ -621,6 +550,51 @@ footer .pie .lista-redes a
     {
         margin-left: 23px;
     }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .logo
+    {
+        align-content: end;
+    }
+    
+    .foto1
+    {
+        height: 580px;
+    }
+    .nombre
+    {
+        font-size: 3rem;
+    }
+    .id
+    {
+        font-size: 2rem;
+    }
+    .cards .box
+    {
+        width: 45%;    
+    } 
+    .cards
+    {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .navbar-links ul li a 
+    {
+        font-size: 0.8rem;        
+        text-transform: uppercase;
+    }
+    .slider .slide-track
+    {
+        animation: scroll 12s infinite;
+        -webkit-animation: scroll 12s infinite linear;
+        width: calc(250px * 12);
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    
 }
 
 @media screen and (min-width: 1024px) {
@@ -729,7 +703,7 @@ footer .pie .lista-redes a
     {
         animation: scroll 12s infinite;
         -webkit-animation: scroll 12s infinite linear;
-        width: calc(200px * 12);
+        width: calc(300px * 12);
         margin-top: 20px;
         margin-bottom: 0px;
     }
@@ -737,10 +711,6 @@ footer .pie .lista-redes a
     {
         padding-top: 0%;
     }
-    /* .video-fondo
-    {
-        height: 223%;
-    } */
     footer .pie .lista-redes
     {
         color: rgb(250, 242, 144);
@@ -762,12 +732,12 @@ footer .pie .lista-redes a
     }
 }  
 
-@media screen and (max-width: 1880px) {
+@media screen and (min-width: 1500px) {
     body
     {
         margin: 0 auto;
         position: relative;      
-        max-width: 1880px;
+        min-width: 1500px;
     }
     .slider .slide-track
     {
@@ -784,8 +754,9 @@ footer .pie .lista-redes a
         justify-content: center;
         background-color: #000000;
     }
-    .video-fondo
+     .video-fondo
     {
-        height: 135%;
+        height: 223%;
     }
+   
 }
