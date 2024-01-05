@@ -240,7 +240,10 @@ a{
 {
     width: 100%;
     height: 50%;
-
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0.5;
+    padding: 20px;
 }
 .nombre
 {
@@ -251,6 +254,7 @@ a{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
+    text-shadow: 2px 2px 4px #ebde28;
 }
 .id
 {
@@ -357,6 +361,10 @@ a{
     color: aliceblue;
     margin-bottom: 10px;
     line-height: 1.4em;
+}
+.text-justify
+{
+    text-align: justify;
 }
 .cards .box .text a
 {
@@ -557,18 +565,50 @@ footer .pie .lista-redes a
     {
         align-content: end;
     }
-    
+    .titulo-h1 .efecto
+    {
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+    .nombre-foto
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-bottom: 10%;
+    }
+    .foto
+    {
+        justify-content: center; 
+        flex-direction: row; 
+        width: 50%;
+
+    }
     .foto1
     {
-        height: 580px;
+        width: 70%;
+        padding: 0%;
+
     }
     .nombre
     {
         font-size: 3rem;
+        margin-left: 5%;
+        padding-bottom: 5%;
     }
     .id
     {
-        font-size: 2rem;
+        margin-left: 0%;
+        margin-right: 13%;
+    }
+    .bienvenido
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 50%;
+        color: rgb(239, 247, 131);
+        font-size: 1.5rem;
     }
     .cards .box
     {
@@ -659,8 +699,8 @@ footer .pie .lista-redes a
     }
     .foto1
     {
-        width: 60%;
-
+        width: 80%;
+        box-shadow: 1px 1px 20px;
     }
     .id
     {
@@ -675,6 +715,7 @@ footer .pie .lista-redes a
         width: 50%;
         color: rgb(239, 247, 131);
         font-size: 2em;
+        text-shadow: 2px 2px 4px #ebde28;
     }
     .cards
     {
@@ -722,7 +763,7 @@ footer .pie .lista-redes a
     {
         color: rgb(250, 242, 144);
         z-index: 2;
-        font-size: 2rem;
+        font-size: 4rem;
     }
     .copy
     {
@@ -753,10 +794,5 @@ footer .pie .lista-redes a
         align-items: center;
         justify-content: center;
         background-color: #000000;
-    }
-     .video-fondo
-    {
-        height: 223%;
-    }
-   
+    }   
 }
