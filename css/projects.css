@@ -11,8 +11,8 @@ body
 {
 	cursor: none;
     font-size: 1rem;
-    margin: 0%;
-	
+    margin: 0%;	
+    overflow-x: hidden !important;
     background-color: #0e0f0f;
 }
 .cursor
@@ -55,7 +55,6 @@ body
     /* height: 100vh; Este valor lo puedes omitir si la altura de tu componente esta definida */
     background: rgb(0, 0, 0);
     background: linear-gradient(302deg, rgba(0,0,0,1) 0%, rgba(86,86,92,1) 63%, rgba(255,255,255,0.9920343137254902) 100%);
-    
     color: white;
     font-family: 'Open Sans', sans-serif;
     display: grid;
@@ -152,10 +151,6 @@ a{
     align-items: center;
     background-color: transparent;
 }
-.brand-title {
-    font-size: 1.5rem;
-    margin: .5rem;
-}
 .navbar-links {
     margin-top: 20px;
     height: 50%;
@@ -205,7 +200,7 @@ h1
 {
     text-align: center;
     grid-column: span 10;
-    color: #000000;
+    color: #ffffff;
     text-align: justify;
     padding-left: 5%;
     padding-right: 5%;
@@ -243,7 +238,6 @@ h1
 {
     grid-column: span 10;
     padding: 5%;
-    width: 100%;
 }
 .foto-1
 {
@@ -256,7 +250,6 @@ h1
 {
     grid-column: span 10;
     padding: 5%;
-    width: 100%;
 }
 .foto-2
 {
@@ -269,7 +262,6 @@ h1
 {
     grid-column: span 10;
     padding: 5%;
-    width: 100%;
 }
 .foto-3
 {
@@ -299,6 +291,7 @@ h1
 	margin-left: 1rem;
 	font-size: 1.5rem;
     color: rgb(250, 242, 144);
+    text-shadow: 1px 1px 2px blue, 0 0 0.2em blue;
 }
 .footer
 {
@@ -355,206 +348,153 @@ h1
 }
 
 @media (min-width: 768px) and (max-width: 1023px){
+    .container
+    {
+        min-width: 768px;
+        grid-template-rows: auto 7% 6% 19% 7% 19% 7% 29% 3% 3%;
+    
+    }
+    .header
+    {
+        width: 100%;
+    }
     .logo
     {
         align-content: end;
     }
-    .nombre
+    .navbar
     {
-        font-size: 3rem;
-        color: white;
-    }
-    .id
-    {
-        font-size: 2rem;
-    }
-    .cards .box
-    {
-        width: 45%;    
-    } 
-    .cards
-    {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        width: 90%;
+        justify-content: end;        
     }
     .navbar-links ul li a 
     {
-        font-size: 0.8rem;        
+        font-size: 0.6rem;        
         text-transform: uppercase;
-    }    
+    }  
+    .titulo 
+    {
+        margin-top: 5%;
+        font-size: 1.5rem;
+    }
+    .fila .lista-redes a
+    {
+        text-shadow: 1px 1px 2px blue, 0 0 0.2em blue;
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
 
-    .body
-    {
-        border-radius: 20px;
-    }
     .container
     {
         margin: 0 auto;
-        position: relative;      
+        position: relative; 
         max-width: 1024px;
-        height: 100%;
-        background: rgb(0,0,0);
-        background: linear-gradient(302deg, rgba(0,0,0,1) 0%, rgba(86,86,92,1) 39%, rgba(255,255,255,0.9920343137254902) 100%);border-radius: 10px;
-        box-shadow: 10px 10px 12px #9c9898;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 15% 24% 24% 20% 10% 3% 0% 0% 0%;
         
     }
     .header
     {
         width: 100%;
-        top: 0;
-        left: 0;
     }
-    .logo{
-        width: 100%;
-        flex-wrap: nowrap;
-        margin-left: 0%;
-    }
-    .logo .boton
+    .logo
     {
-        margin-left: 5%;
+        align-content: end;
     }
-    .navbar-links 
+    .navbar
     {
         width: 100%;
-        display: flex;
-        justify-content: flex-end;
+        justify-content: flex-end;        
     }
     .navbar-links ul li a 
     {
-        color: rgb(250, 242, 144);
-        font-size: 1rem;        
+        font-size: 0.9rem;        
         text-transform: uppercase;
-    }
-    .navbar-links ul li a:hover
-    {
-        background: #494b4b;
-        border-radius: 15px;
-        padding: 5px 10px;
-        color: #fff;
-    }
-    .nombre-foto
-    {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-bottom: 15px;
-        margin-top: 0%;
-    }
-    .titulo
-    {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        font-size: 1.3rem;
-        padding-left: 5%;        
-        text-shadow: 2px 2px 4px #000000;
     }  
-    .foto
+    .navbar-links li a:hover
     {
-        justify-content: center; 
-        flex-direction: row; 
-        width: 100%;
-        margin-top: 5%;
-        margin-bottom: 4%;
+    background-color: #000000;
+    border-radius: 20px;
+    color: #f2f2f2;
     }
-    .foto1
+    .titulo 
     {
-        width: 80%;
-        height: 50%;
+        grid-column: span 2; 
+        margin-top: 2%;
+        font-size: 2rem;
     }
-    .sobre-mi-redes
-   {
-        width: 100%;
-        display: flex;
-        flex-direction: row;    
-        padding-left: 5%;
-   }
-   .sobre-mi
-   {
-        width: 50%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        border-style: solid;
-        border-radius: 20px;
-        margin-bottom: 5%;
-   }
-   .fila
-   {
-        width: 50%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-   }
-   .fila .lista-redes a
-   {
-       color: rgb(250, 242, 144);
-       font-size: 4rem;
-       text-shadow: 2px 2px 4px #605dfc;
-   } 
-    .copy
+    .titulo-1
     {
+        grid-column: 1 / span 1; 
         display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 0px 0px 10px 10px;
+        flex-direction: column;
+        justify-content: center;        
+    }
+    .foto-1:hover
+    {
+        height: 103%;
+        width: 103%;
+    }
+    .foto-2:hover
+    {
+        height: 103%;
+        width: 103%;
+    }
+    .proyecto-1
+    {
+        grid-column: span 2;
+        
+    }
+    .proyecto-1 .foto-1:hover
+    {
+        opacity: .7;
+    }
+    .titulo-2
+    {
+        grid-column: 1 / span 1;  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
+    }
+    .proyecto-2
+    {
+        grid-column: span 2;
+    }
+    .proyecto-2 .foto-2:hover
+    {
+        opacity: .7;
+    }
+    .titulo-3
+    {
+        grid-column: 1 / span 1; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;         
+    }
+    .proyecto-3
+    {
+        grid-column: span 2;
+    }
+    .proyecto-3 .foto-3:hover
+    {
+        opacity: .7;
+    }
+    .foto-3
+    {
+        width: 453;
+        height: 250px;
+        object-fit: cover;
+    }
+    .foto-3:hover
+    {
+        height: 103%;
+        width: 103%;
+    }
+    .fila .lista-redes a
+    {
+        text-shadow: 1px 1px 2px blue, 0 0 0.2em blue;
+        font-size: 3rem;
     }
 }  
-
-/*
-.nombre-foto
-{
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items:center;
-    margin-top: 15%;
-}
-.titulo
-{
-    flex-direction:column;
-    flex-wrap: wrap;
-    font-size: 1.1.2rem;
-    line-height: 1;
-    padding: 12px;
-    text-align: justify;
-    color: rgb(250, 242, 144);
-
-}
-.foto
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    width:100%;  
-    margin-top: 12%;
-}
-.foto1
-{
-    width: 80%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 20px;
-    opacity: 0.5;
-    box-shadow: 10px 10px 5px #3f3d3d;
-    transition: width 2s, height 2s;
-    
-}
-.foto1:hover
-{
-  width: 83%;
-}
-.sobre-mi
-{
-    display: flex;
-    flex-direction: column;
-    padding: 12px;
-    text-align: justify;    
-} 
-*/
