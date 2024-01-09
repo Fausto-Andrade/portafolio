@@ -2,6 +2,8 @@ html
 {
     font-size: 16px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    line-height: 1.5;
 }
 *, *::before, *::after 
 {
@@ -50,17 +52,18 @@ body
 }
 .container
 {
+    width: 100%;
     display:flex;
     flex-direction:column;
     align-content: center;
     flex-wrap: nowrap;
     align-items:unset;
-    /*height: 100vh; Este valor lo puedes omitir si la altura de tu componente esta definida */
-    width: auto;
+    height: 100vh; /* Este valor lo puedes omitir si la altura de tu componente esta definida */
+    overflow-x: hidden !important;
 }
 .header
 {
-    height: auto;
+    height: 20%;
 }
 .logo{
     height: 100%;
@@ -132,7 +135,6 @@ body
 {
 	animation: rotate 1.5s linear infinite;
 }
-
 @keyframes rotate {
 	0%{filter: hue-rotate(0deg);}
 	100%{filter: hue-rotate(360deg);}
@@ -140,6 +142,7 @@ body
 .titulo-h1
 {
     font-size: 14px;
+    margin-top: 13%;
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;
@@ -179,7 +182,7 @@ body
 a{
     text-decoration: none;
     margin: 5px;
-    color: rgb(250, 242, 144);
+    /* color: rgb(250, 242, 144); */
 }
 .navbar 
 {
@@ -187,7 +190,6 @@ a{
     justify-content: space-between; 
     align-items: center;
     background-color: transparent;
-    color: rgb(250, 242, 144);
 }
 .brand-title {
     font-size: 1.5rem;
@@ -208,7 +210,7 @@ a{
 .navbar-links li a {
     display: block;
     text-decoration: none;
-    color: rgb(250, 242, 144);
+    /* color: rgb(250, 242, 144); */
     padding: 1rem;
 }
 .toggle-button {
@@ -233,22 +235,23 @@ a{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    height:20%;
+    height:auto;
     width:100%;    
 }
 .foto1
 {
     width: 100%;
-    height: 50%;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
     opacity: 0.5;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .nombre
 {
-    font-size: 1.5em;
-    margin: 0%;
+    font-size: 1.9em;
+    /* padding-top: 15%; */
     color: white;
     display: flex;
     flex-direction: column;
@@ -383,10 +386,6 @@ a{
     color: rgb(255, 255, 255);
     background: rgb(0, 0, 0);
 }
-.slider
-{    
-    overflow: hidden;
-}
 .slider .slide-track
 {
 	display: flex;
@@ -427,31 +426,15 @@ a{
 .slide
 {
 	border: 6px solid transparent;	
-
+    
 }
 .pie-pagina
 {
     display: flex;
 }
-.copy
-{
-    text-align: center;
-    background-color: #000000;
-    padding: 10px;
-    z-index: 4;
-}
 .pie-pagina
 {
     display: flex;
-}
-.centrar-texto
-{
-    text-align: center;
-}
-.copy
-{
-    text-align: center;
-    top: 100%;
 }
 footer .pie
 {
@@ -471,52 +454,15 @@ footer .pie .lista-redes a
 	font-size: 1.5rem;
     color: rgb(250, 242, 144);
 }
-.container
+.copy
 {
-    width: 100%;
-}
-
-.columna-mb-100
-{
-    width: 100%;
+    top: 100%;
     text-align: center;
+    background-color: #000000;
+    padding: 10px;
+    z-index: 4;
 }
-
-.columna-mb-50
-{
-    width: 50%;
-}
-
-.columna-mb-41
-{
-    width: 41.66%;
-}
-
-.columna-mb-33
-{
-    width: 33.33%;
-}
-
-.columna-mb-25
-{
-    width: 16.66%;
-}
-
-.columna-mb-16
-{
-    width: 8.33%;
-}
-
-.columna-mb-8
-{
-    width: 8.33%;
-}
-.empujar-mb-0
-{
-    margin-left: 0;
-}
-
-/* -------------------------------------------------------------------------- */
+/* --- Menu Hamburguesa --- */
 @media (max-width: 768px) {
 
     .navbar {
@@ -548,7 +494,8 @@ footer .pie .lista-redes a
 
     .navbar-links ul li a {
         padding: .5rem 1rem;
-        color: rgb(250, 242, 144);
+        color: rgb(255, 255, 255);
+        font-size: 1.3rem;
     }
 
     .navbar-links.active {
@@ -561,14 +508,19 @@ footer .pie .lista-redes a
 }
 
 @media (min-width: 768px) and (max-width: 1023px){
+   
     .logo
     {
         align-content: end;
     }
+    .navbar
+    {
+        width: 80%;
+    }
     .titulo-h1 .efecto
     {
-        margin-top: 15%;
-        margin-bottom: 15%;
+        margin-top: 0%;
+        margin-bottom: 10%;
     }
     .nombre-foto
     {
@@ -582,7 +534,6 @@ footer .pie .lista-redes a
         justify-content: center; 
         flex-direction: row; 
         width: 50%;
-
     }
     .foto1
     {
@@ -598,8 +549,7 @@ footer .pie .lista-redes a
     }
     .id
     {
-        margin-left: 0%;
-        margin-right: 13%;
+        margin-left: 4%;
     }
     .bienvenido
     {
@@ -610,21 +560,29 @@ footer .pie .lista-redes a
         color: rgb(239, 247, 131);
         font-size: 1.5rem;
     }
+    .cards  
+    {
+        width: 100%;   
+        position: relative;
+        display: flex; 
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+    }
     .cards .box
     {
         width: 45%;    
     } 
     .cards
     {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
     }
     .navbar-links ul li a 
     {
-        font-size: 0.8rem;        
+        font-size: 0.6rem;        
         text-transform: uppercase;
+        color: rgb(250, 242, 144);
     }
     .slider .slide-track
     {
@@ -633,6 +591,11 @@ footer .pie .lista-redes a
         width: calc(250px * 12);
         margin-top: 20px;
         margin-bottom: 0px;
+    }
+    .footer .pie .lista-redes a
+    {
+        font-size: 2rem;
+        text-shadow: 1px 1px 2px blue, 0 0 0.2em blue;
     }
     
 }
@@ -657,7 +620,8 @@ footer .pie .lista-redes a
     }
     .logo .boton
     {
-        margin-left: 0%;
+        margin-left: 4%;
+        margin-top: 2.5%;
     }
     .navbar-links 
     {
@@ -679,6 +643,10 @@ footer .pie .lista-redes a
         cursor: none;
         color: rgb(250, 242, 144);
     }
+    .titulo-h1
+    {
+        margin-top: 5%;
+    }
     .titulo-h1 .efecto
     {
         margin-top: 5%;
@@ -689,6 +657,7 @@ footer .pie .lista-redes a
         flex-direction: row-reverse;
         align-items: center;
         padding-bottom: 15px;
+        padding-left: 4%;
     }
     .foto
     {
@@ -752,18 +721,17 @@ footer .pie .lista-redes a
     {
         padding-top: 0%;
     }
-    footer .pie .lista-redes
+    .footer .pie .lista-redes
     {
-        color: rgb(250, 242, 144);
-        z-index: 2;
         font-size: 2rem;
         margin-bottom: 0%;
     }
-    footer .pie .lista-redes a
+    .footer .pie .lista-redes a
     {
         color: rgb(250, 242, 144);
         z-index: 2;
         font-size: 4rem;
+        text-shadow: 1px 1px 2px blue, 0 0 0.2em blue;
     }
     .copy
     {
@@ -779,6 +747,10 @@ footer .pie .lista-redes a
         margin: 0 auto;
         position: relative;      
         min-width: 1500px;
+    }
+    .container
+    {
+        height: 100%;
     }
     .slider .slide-track
     {
