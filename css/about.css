@@ -11,11 +11,11 @@ html
 }
 body
 {
-	cursor: none;
+    cursor: none;
     font-size: 1rem;
     margin: 0%;
 	overflow-x: hidden !important; /* eiminar scroll horizontal */
-    background-color: rgb(0, 0, 0);
+    background-color: #000000;
 }
 .cursor
 {
@@ -58,14 +58,15 @@ body
     flex-direction:column;
     align-content: center;
     flex-wrap: nowrap;
-    height: 100vh; /*Este valor lo puedes omitir si la altura de tu componente esta definida */
+    /*height: 100vh; Este valor lo puedes omitir si la altura de tu componente esta definida */
     background: #18181B;
     color: white;
     font-family: 'Open Sans', sans-serif;
+    box-shadow: 10px 10px 5px 0px rgba(68, 67, 67, 0.75);
 }
 .header
 {
-    height: 20%;
+    min-height: 100px;
 }
 .logo{
     height: 100%;
@@ -88,8 +89,8 @@ body
 	height: 80px;
 	border-radius: 50px;
     align-content: center;   
-    margin-left: 23px;
-    margin-top: 10px;
+    margin-left: 2rem;
+    margin-top: 2rem;
     position: absolute;
 }
 .otro button, .otro span
@@ -154,10 +155,6 @@ a{
     background-color: transparent;
     color: rgb(250, 242, 144);
 }
-.brand-title {
-    font-size: 1.5rem;
-    margin: .5rem;
-}
 .navbar-links {
     margin-top: 20px;
     height: 50%;
@@ -176,29 +173,12 @@ a{
     color: rgb(250, 242, 144);
     padding: 1rem;
 }
-.toggle-button {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-}
 .nombre-foto
 {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items:center;
-    margin-top: 15%;
 }
 .titulo
 {
@@ -207,9 +187,13 @@ a{
     font-size: 1.1.2rem;
     line-height: 1;
     padding: 12px;
-    text-align: justify;
+    text-align: center;
     color: rgb(250, 242, 144);
 
+}
+.nombre
+{
+    font-size: 4rem;
 }
 .foto
 {
@@ -231,9 +215,10 @@ a{
     transition: width 2s, height 2s;
     
 }
-.foto1:hover
+.foto-sobre-mi
 {
-  width: 83%;
+    display: flex;
+    justify-content: center;
 }
 .sobre-mi
 {
@@ -241,6 +226,16 @@ a{
     flex-direction: column;
     padding: 12px;
     text-align: justify;    
+}
+p{
+    font-size: 1.7rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align:justify ;
+}
+.foto3
+{
+    display: none;
 }
 .fila .lista-redes
 {
@@ -251,7 +246,7 @@ a{
 .fila .lista-redes a
 {
 	margin-left: 1rem;
-	font-size: 1.5rem;
+	font-size: 3.5rem;
     color: rgb(250, 242, 144);
     text-shadow: 1px 1px 2px blue, 0 0 0.2em blue;
 }
@@ -261,11 +256,28 @@ a{
     padding: 10px;
     color: #000;
     background-color:white;
+    font-size: 2rem;
 }
 
 /* Hamburguesa-Menu */
 @media (max-width: 768px) {
 
+    .toggle-button 
+    {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px;
+        height: 30px;
+    }
+    .toggle-button .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+    }
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -296,6 +308,7 @@ a{
     .navbar-links ul li a {
         padding: .5rem 1rem;
         color: rgb(250, 242, 144);
+        font-size: 2rem;
     }
 
     .navbar-links.active {
@@ -306,7 +319,6 @@ a{
         margin-left: 23px;
     }
 }
-
 
 @media (min-width: 768px) and (max-width: 1023px){
     .logo
@@ -337,6 +349,10 @@ a{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
+    }
+    .navbar
+    {
+        margin-top: 1.5rem;
     }
     .navbar-links ul li a 
     {
@@ -389,6 +405,10 @@ a{
     {
         margin-left: 5%;
     }
+    .navbar
+    {
+        padding-top: 1.5rem;
+    }
     .navbar-links 
     {
         width: 100%;
@@ -409,6 +429,21 @@ a{
         cursor: none;
         color: rgb(250, 242, 144);
     }
+    .titulo
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        font-size: 1.3rem;
+        padding-left: 5%;        
+        text-shadow: 2px 2px 4px #605dfc;
+        width: 50%;
+    }
+    .nombre
+    {
+        display: flex;
+        text-align: left;
+    }
     .nombre-foto
     {
         display: flex;
@@ -417,15 +452,6 @@ a{
         padding-bottom: 15px;
         margin-top: 0%;
     }
-    .titulo
-    {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        font-size: 1.3rem;
-        padding-left: 5%;        
-        text-shadow: 2px 2px 4px #605dfc;
-    }  
     .foto
     {
         justify-content: center; 
@@ -436,42 +462,102 @@ a{
     }
     .foto1
     {
-        width: 80%;
-        height: 50%;
+        /* width: 80%; */
+        /* height: 80%; */
+        margin-right: 5%;
     }
     .foto1:hover
     {
         transform: rotate(5deg);
     }
-
     .sobre-mi-redes
-   {
-    width: 100%;
-    display: flex;
-    flex-direction: row;    
-    padding-left: 5%;
-   }
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;    
+        flex-wrap: wrap;
+        padding: 5%;
+    }
    .sobre-mi
    {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-style: solid;
-    border-radius: 20px;
-    margin-bottom: 5%;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        border-style: solid;
+        border-radius: 20px;
+        margin-bottom: 5%;
    }
+   .foto-sobre-mi
+   {
+       width: 50%;
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: row;
+       align-content: center;
+       padding-bottom: 5%;
+   }
+   .sobre-mi:hover
+   {
+    box-shadow: 10px 10px 20px 0px rgba(196, 192, 192, 0.85);
+    opacity: .7;
+   }
+   p
+   {
+    font-size: 1.3rem;
+   }
+   .sobre-mi-dos
+   {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        border-style: solid;
+        border-radius: 20px;
+        padding: 2%;
+   }
+   .sobre-mi-dos:hover
+   {
+    box-shadow: 10px 10px 20px 0px rgba(196, 192, 192, 0.85);
+    opacity: .7;
+   }
+   .foto2:hover
+   {
+    -webkit-transition: 3s;
+    -webkit-transform: rotate3d(0,100,0, 360deg);
+   }
+   .balon
+    {
+       width: 50%;
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: row;
+       align-content: center;
+       padding-bottom: 5%;
+    }
+    .foto3
+    {   
+        display: inline;
+        margin-left: 5%;
+        border-radius: 50%;
+        box-shadow: 10px 10px 20px 0px rgba(196, 192, 192, 0.85);
+        opacity: .7;
+    }
+    .foto3:hover
+    {
+        height: 380px;
+        transform: translate(10px);
+    }
    .fila
    {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+       display: flex;
+       flex-direction: row;
+       text-align: center;
+       justify-content: center;
+       width: 100%;
    }
    .fila .lista-redes a
    {
        color: rgb(250, 242, 144);
-       font-size: 4rem;
+       font-size: 3rem;
        text-shadow: 1px 1px 2px blue, 0 0 0.2em blue;
    } 
     .copy
@@ -479,5 +565,6 @@ a{
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 1.5rem;
     }
 }  

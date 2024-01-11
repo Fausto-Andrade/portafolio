@@ -58,12 +58,12 @@ body
     align-content: center;
     flex-wrap: nowrap;
     align-items:unset;
-    height: 100vh; /* Este valor lo puedes omitir si la altura de tu componente esta definida */
+    /*height: 100vh; /* Este valor lo puedes omitir si la altura de tu componente esta definida */
     overflow-x: hidden !important;
 }
 .header
 {
-    height: 20%;
+    min-height: 185px;
 }
 .logo{
     height: 100%;
@@ -142,7 +142,6 @@ body
 .titulo-h1
 {
     font-size: 14px;
-    margin-top: 13%;
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;
@@ -151,7 +150,6 @@ body
 .efecto
 {
 	background: #3a3a3b;
-	/* margin-top: 50px; */
     font-size: 4rem;
     font-weight: 900 !important;
     letter-spacing: -1px;
@@ -166,11 +164,9 @@ body
 .titulo-h1 .efecto
 {
     flex-direction: column;
-    align-self:auto;
-    height:22%;
     width: 80%;
-    margin-top: 30%;
     text-align: center;
+    margin-top: 0%;
 }
 @keyframes animated-gradient	
 {
@@ -469,11 +465,6 @@ footer .pie .lista-redes a
         flex-direction: column;
         align-items: flex-start;
     }
-    .titulo-h1 .efecto
-    {
-        margin-top: 30%;
-    }
-
     .toggle-button {
         display: flex;
     }
@@ -631,7 +622,7 @@ footer .pie .lista-redes a
     }
     .navbar-links ul li a 
     {
-        color: #fff;
+        color: #acacac;
         font-size: 1rem;        
         text-transform: uppercase;
     }
@@ -642,10 +633,6 @@ footer .pie .lista-redes a
         padding: 5px 10px;
         cursor: none;
         color: rgb(250, 242, 144);
-    }
-    .titulo-h1
-    {
-        margin-top: 5%;
     }
     .titulo-h1 .efecto
     {
@@ -668,8 +655,10 @@ footer .pie .lista-redes a
     }
     .foto1
     {
-        width: 80%;
+        width: 90%;
         box-shadow: 1px 1px 20px;
+        padding-top: 4%;
+        padding-bottom: 4%;
     }
     .id
     {
@@ -692,6 +681,11 @@ footer .pie .lista-redes a
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        opacity: .7;
+    }
+    .cards:hover
+    {
+        opacity: 1;
     }
     .cards .box
     {
@@ -717,6 +711,10 @@ footer .pie .lista-redes a
         margin-top: 20px;
         margin-bottom: 0px;
     }
+    .slider:hover .slide-track
+    {
+        animation-play-state: paused;
+    }
     .footer .pie
     {
         padding-top: 0%;
@@ -731,7 +729,7 @@ footer .pie .lista-redes a
         color: rgb(250, 242, 144);
         z-index: 2;
         font-size: 4rem;
-        text-shadow: 1px 1px 2px blue, 0 0 0.2em blue;
+        text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 0.2em rgb(255, 255, 255);
     }
     .copy
     {
@@ -766,5 +764,6 @@ footer .pie .lista-redes a
         align-items: center;
         justify-content: center;
         background-color: #000000;
+        box-shadow: 0px 0px 20px 20px rgba(68, 67, 67, 1.5);
     }   
 }
