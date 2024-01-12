@@ -247,7 +247,6 @@ a{
 .nombre
 {
     font-size: 1.9em;
-    /* padding-top: 15%; */
     color: white;
     display: flex;
     flex-direction: column;
@@ -614,7 +613,7 @@ footer .pie .lista-redes a
         margin-left: 4%;
         margin-top: 2.5%;
     }
-    .navbar-links 
+    .navbar-links
     {
         width: 100%;
         display: flex;
@@ -626,13 +625,18 @@ footer .pie .lista-redes a
         font-size: 1rem;        
         text-transform: uppercase;
     }
+    /* .list-item.active .list-link
+    {
+        background: rgb(0, 0, 0);
+        color: rgb(250, 242, 144);
+    } */
     .navbar-links ul li a:hover
     {
         background: rgb(0, 0, 0);
+        color: rgb(250, 242, 144);
         border-radius: 15px;
         padding: 5px 10px;
         cursor: none;
-        color: rgb(250, 242, 144);
     }
     .titulo-h1 .efecto
     {

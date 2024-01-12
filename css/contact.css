@@ -247,7 +247,27 @@ h1
 {
     padding-left: 10%;
     font-size: 1.9rem;
+    padding-right: 4%;
 }
+.titulo
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .titulo a
+    {
+        padding-right: 12%;
+        padding-top: 1%;
+    }
+    a i
+    {
+        color:#ecde5b;
+        font-size: 2rem;
+        transform: translateX(0);
+        transition: transform .3s;
+    }
 .form
 {
     margin-right: 20%;
@@ -467,12 +487,32 @@ ul
     h1
     {
         padding-left: 10%;
+        padding-right: 2%;
     }
     .main
     {
         display: flex;
         flex-direction: row;
         width: 100%; 
+    }
+    .titulo
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .titulo a
+    {
+        padding-right: 12%;
+        padding-top: 1%;
+    }
+    a i
+    {
+        color:#ecde5b;
+        font-size: 2rem;
+        transform: translateX(0);
+        transition: transform .3s;
     }
     .form
     {
@@ -632,9 +672,33 @@ ul
     {
        margin-left: 14%; 
     }
+    .titulo
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .titulo a
+    {
+        padding-right: 12%;
+        padding-top: 1%;
+    }
+    a i
+    {
+        color:#eeeeee;
+        font-size: 2rem;
+        transform: translateX(0);
+        transition: transform .3s;
+    }
+    a:hover i
+    {
+        transform: translateX(10px);
+        color: #ecde5b;
+    }
     h1
     {
-        padding-left: 35%
+        padding-right: 5%;
     }
     h2
     {

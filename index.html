@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/style.css"><!-- llamar el archivo de estilos -->
         <link rel="stylesheet" href="css/background_styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="shortcut icon" href="img/icono5.PNG"> <!-- poner la imagen en la pestaña de la pagina --> 
         <title>Portafolio</title>
         <script src="https://kit.fontawesome.com/6498e4493f.js" crossorigin="anonymous"></script>
@@ -39,11 +40,19 @@
                         </a>
                         <div class="navbar-links">
                           <ul>
-                            <li><a href="sobremi.html">Sobre Mi</a></li>
                             <!-- <li><a href="formacion.html">Formación</a></li> -->
-                            <li><a href="skills.html">Habilidades</a></li>
-                            <li><a href="proyectos.html">Proyectos</a></li>
-                            <li><a href="contacto.html">Contacto</a></li>
+                            <li class="list-item active">
+                                <a class="list-link" href="sobremi.html">Sobre Mi</a>
+                            </li>
+                            <li class="list-item active">
+                                <a class="list-link" href="skills.html">Habilidades</a>
+                            </li>
+                            <li class="list-item active">
+                                <a class="list-link" href="proyectos.html">Proyectos</a>
+                            </li>
+                            <li class="list-item active">
+                                <a class="list-link" href="contacto.html">Contacto</a>
+                            </li>
                           </ul>
                         </div>
                     </nav>                    
@@ -58,7 +67,7 @@
                     <img class="foto1" src="img/foto_perfil_portafolio.jpg" width="200" height="150" alt="joven estudiando"> 
                 </div>            
                 <div class="bienvenido">
-                    <h2 class="nombre">Hola, Soy Fausto Andrade</h2>                  
+                    <h2 class="nombre">Hola, Soy <span></span></h2>                 
                     <h2 class="id">Bienvenido a Mi Portafolio</h2>  
                 </div> 
             </div>             
@@ -203,9 +212,9 @@
                             <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
                             <a href="https://www.linkedin.com/in/fausto-antonio-andrade-vera-20b4201b1"><i class="fa-brands fa-linkedin-in"></i></a>
                             <a href="https://www.instagram.com/fausto_andrade_2023?igsh=MWdsMXdyZ3Qyc2E3MQ=="><i class="fab fa-instagram"></i></a>
-                            <a href="faustoantonioandradevera@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="mailto:faustoantonioandradevera@gmail.com"><i class="fa fa-envelope"></i></a>
                             <a href="https://github.com/Fausto-Andrade"><i class="fa fa-github"></i></a>
-                            <a href="+573113374917"><i class="fa fa-whatsapp"></i></a>
+                            <a href="https://wa.me/+573113374917"><i class="fa fa-whatsapp"></i></a>
                         </div>                            
                     </div> 
                     <div class="copy">
@@ -213,6 +222,16 @@
                     </div>                           
                 </div> 
             </footer>
-        <script src="js/index.js"></script>    
+        <script src="js/index.js"></script> 
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> 
+        <script>
+            const typed = new Typed('.nombre span', {
+              strings: ['Fausto Andrade'],
+              typeSpeed: 80,
+              backSpeed: 60,
+              loop: true,
+              cursorChar: '',
+            })
+        </script>  
     </body>
 </html>
