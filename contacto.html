@@ -1,11 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-</head>
-<body>
-    <h1>Contacto</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/normalize.css"> <!-- Quitar los espacios y margenes por defeto de la maquetación -->
+        <link rel="stylesheet" href="css/contact.css"><!-- llamar el archivo de estilos -->
+        <link rel="stylesheet" href="css/background_styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="img/icono5.PNG"> <!-- poner la imagen en la pestaña de la pagina --> 
+        <title>Sobre mi</title>
+        <script src="https://kit.fontawesome.com/6498e4493f.js" crossorigin="anonymous"></script>        
+    </head>
+    <body class="body">
+        <div class="cursor"></div> 
+            <div class="container">
+                <header class="header">
+                    <div class="logo">                  
+                        <div class="otro boton">
+                            <button type="button"><a href="index.html">F</a></button>
+                            <span></span>
+                            <span></span>
+                        </div>                     
+                        <nav class="navbar">
+                            <a href="#" class="toggle-button">
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                            </a>
+                            <div class="navbar-links">
+                                <ul>
+                                    <li><a href="sobremi.html">Sobre Mi</a></li>
+                                    <!-- <li><a href="formacion.html">Formación</a></li> -->
+                                    <li><a href="skills.html">Habilidades</a></li>
+                                    <li><a href="proyectos.html">Proyectos</a></li>
+                                    <li><a href="contacto.html">Contacto</a></li>
+                                </ul>
+                            </div>
+                        </nav>                    
+                    </div> 
+                </header>
+                <div class="lado-izq">
+                    <div class="foto">
+                        <img class="foto1" src="img/contact.png" width="375" height="250" alt="joven estudiando"> 
+                    </div>
+                    <div class="vertical">
+                        <span class="vertical-with"></span>
+                    </div>   
+                    <div class="fila">
+                        <h2>Síguenos</h2>
+                        <div class="lista-redes">
+                            <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+                            <a href="https://www.linkedin.com/in/fausto-antonio-andrade-vera-20b4201b1"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/fausto_andrade_2023?igsh=MWdsMXdyZ3Qyc2E3MQ=="><i class="fab fa-instagram"></i></a>
+                            <a href="faustoantonioandradevera@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="https://github.com/Fausto-Andrade"><i class="fa fa-github"></i></a>
+                            <a href="+573113374917"><i class="fa fa-whatsapp"></i></a>
+                        </div>                            
+                    </div>
+                </div>
+                <div class="pie"> 
+                    <div class="copy">
+                        <b> &reg; Derechos Reservados 2024;</b>
+                    </div>                           
+                </div>
+                <div class="vertical-yellow"></div>  
+                <div class="titulo">
+                    <h1>Ponerse en contacto</h1>
+                </div> 
+                <div class="main">
+                    
+                    <form class="form" action="formulario" method="post">
+                        <ul>
+                        <li>
+                            <!-- <label for="name">Nombre:</label> -->
+                            <input type="text" id="name" name="user_name" placeholder="Ingrese su Nombre" />
+                        </li>
+                        <br><br>
+                        <li>
+                            <!-- <label for="mail">Correo electrónico:</label> -->
+                            <input type="email" id="mail" name="user_mail" placeholder="Ingrese su Correo" />
+                        </li>
+                        <br><br>
+                        <li>
+                            <!-- <label for="msg">Mensaje:</label> -->
+                            <textarea id="msg" name="user_message" placeholder="Ingrese su Mensaje" ></textarea>
+                        </li>
+                        <li class="btn">
+                            <a href="#"><b>Enviar</b></a>
+                        </li>
+                        </ul>
+                    </form>  
+                    <footer class="footer">
+                        <div class="mapa">
+                            <iframe width="900" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                        </div> 
+                    </footer> 
+                </div> 
+            </div> 
+        <script src="js/index.js"></script>    
+    </body>
 </html>
